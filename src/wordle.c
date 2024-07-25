@@ -14,7 +14,7 @@ char palavra_secreta[TAMANHO_PALAVRA + 1];
 void palavraDoJogo()
 {
     char palavras[NUM_PALAVRAS][TAMANHO_PALAVRA + 1] = {"carro", "folha", "museu", "livro", "bolsa"};
-    strcpy(palavra_secreta, palavras[rand() % NUM_PALAVRAS]);
+    strcpy(palavra_secreta, palavras[rand() % NUM_PALAVRAS]); //
 }
 
 void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada)

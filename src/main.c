@@ -31,7 +31,7 @@ int main()
         // Chama a função que seleciona uma palavra secreta para a rodada do jogo
         palavraDoJogo();
 
-        char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1] = {0};
+        char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1] = {0}; //
         char tentativa[TAMANHO_PALAVRA + 1];
         int rodada;
         int acertou = 0;
@@ -49,11 +49,11 @@ int main()
                 scanf("%s", tentativa);
             }
 
-            strcpy(matriz[rodada], tentativa);
+            strcpy(matriz[rodada], tentativa); //
 
             desenharMatriz(matriz, rodada + 1); // Chama a função responsável por desenhar a matriz e incrementa o número da rodada
 
-            if (strcmp(tentativa, palavra_secreta) == 0)
+            if (strcmp(tentativa, palavra_secreta) == 0) //
             {
                 printf("Parabéns! Você acertou a palavra!\n");
                 acertos++;
