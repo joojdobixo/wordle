@@ -10,8 +10,6 @@ int main()
 {
     void palavraDoJogo();
     void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
-    //void palavraDoJogo();
-    //void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
 
     // Gera um número aleatório com base na hora do computador
     srand(time(NULL));
