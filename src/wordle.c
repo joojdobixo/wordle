@@ -17,18 +17,24 @@ void palavraDoJogo()
     strcpy(palavra_secreta, palavras[rand() % NUM_PALAVRAS]); //
 }
 
+// Função para desenhar a matriz de tentativas e comparar com a palavra secreta
 void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada)
 {
+    // Loop através de cada linha da matriz, onde cada linha representa uma tentativa
     for (int i = 0; i < TENTATIVAS; i++)
     {
+        // Loop através de cada caractere na linha atual
         for (int j = 0; j < TAMANHO_PALAVRA; j++)
         {
+            // Verifica se a tentativa atual (linha i) foi feita (i < rodada)
             if (i < rodada)
             {
+                // Se o caractere na tentativa está na posição correta
                 if (matriz[i][j] == palavra_secreta[j])
                 {
                     printf("\033[0;32m%c\033[0m ", matriz[i][j]); // Letra na Posição Correta ---> Verde
                 }
+                // Se o caractere está presente na palavra secreta, mas na posição errada
                 else if (strchr(palavra_secreta, matriz[i][j]))
                 {
                     printf("\033[0;33m%c\033[0m ", matriz[i][j]); // Letras corretas na posição errada ---> Amarelo
