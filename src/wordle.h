@@ -6,7 +6,7 @@
 #define NUM_PALAVRAS 5
 
 // Declaração da variável global palavra_secreta
-extern char palavra_secreta[TAMANHO_PALAVRA + 1];
+char palavra_secreta[TAMANHO_PALAVRA + 1];
 
 // Funções utilizadas no programa
 void palavraDoJogo();

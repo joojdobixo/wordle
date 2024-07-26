@@ -12,11 +12,6 @@ int main()
     void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
     //void palavraDoJogo();
     //void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
-    /*
-        Define a localidade para o Português-Brasil
-        permitindo a utilização de acentos como ^, ç, é.
-    */
-    //setlocale(LC_ALL, "portuguese-brazilian");
 
     // Gera um número aleatório com base na hora do computador
     srand(time(NULL));
@@ -57,7 +52,7 @@ int main()
 
             if (strcmp(tentativa, palavra_secreta) == 0) //
             {
-                printf("Parabéns! Você acertou a palavra!\n");
+                printf("Parabens! Voce acertou a palavra!\n");
                 acertos++;
                 acertou = 1;
                 break;

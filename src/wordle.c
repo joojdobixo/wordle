@@ -4,13 +4,11 @@
 #include <string.h>
 #include <time.h>
 
-
 /*
     incrementa em +1 devida a limitação de como
     Strings funcionam em C, pois sempre são finalizadas em \0
 */
-
-char palavra_secreta[TAMANHO_PALAVRA + 1];
+extern char palavra_secreta[TAMANHO_PALAVRA + 1];
 
 void palavraDoJogo()
 {
@@ -21,6 +19,7 @@ void palavraDoJogo()
 // Função para desenhar a matriz de tentativas e comparar com a palavra secreta
 void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada)
 {
+
     // Loop através de cada linha da matriz, onde cada linha representa uma tentativa
     for (int i = 0; i < TENTATIVAS; i++)
     {
