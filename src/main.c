@@ -26,8 +26,8 @@ int main()
         // Chama a função que seleciona uma palavra secreta para a rodada do jogo
         palavraDoJogo();
 
-        char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1] = {0}; //
-        char tentativa[TAMANHO_PALAVRA + 1];
+        char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1] = {0}; // inicializa todos os elementos com 0
+        char tentativa[TAMANHO_PALAVRA + 1]; // incrementa em +1 considerando o final \0
         int rodada;
         int acertou = 0;
 
@@ -43,10 +43,11 @@ int main()
                 printf("Palavra incorreta! Digite uma palavra de %d letras: ", TAMANHO_PALAVRA);
                 scanf("%s", tentativa);
             }
+            // Copia a rodada para variável tentativa
+            strcpy(matriz[rodada], tentativa);
 
-            strcpy(matriz[rodada], tentativa); //
-
-            desenharMatriz(matriz, rodada + 1); // Chama a função responsável por desenhar a matriz e incrementa o número da rodada
+            // Chama a função responsável por desenhar a matriz e incrementa o número da rodada
+            desenharMatriz(matriz, rodada + 1);
 
             if (strcmp(tentativa, palavra_secreta) == 0) //
             {
@@ -57,11 +58,13 @@ int main()
             }
         }
 
+        // Caso o jogador perca a rodada o jogo revela a palavra
         if (!acertou)
         {
             printf("Que pena, voce nao conseguiu acertar a palavra. A palavra correta era: %s\n", palavra_secreta);
             erros++;
         }
+        // Impressão do resultado da rodada
         printf("Placar: %d Acertos, %d Erros\n", acertos, erros);
         printf("Tente novamente, deseja jogar mais uma vez? (s/n): ");
         scanf(" %c", &Jogar_Novamente);

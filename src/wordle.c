@@ -12,7 +12,10 @@ extern char palavra_secreta[TAMANHO_PALAVRA + 1];
 
 void palavraDoJogo()
 {
+    // Declara e inicializa a lista de palavras
     char palavras[NUM_PALAVRAS][TAMANHO_PALAVRA + 1] = {"carro", "folha", "museu", "livro", "bolsa"};
+
+    // Copia uma das palavras e gera um índice aleatório para a variável global palavra_secreta
     strcpy(palavra_secreta, palavras[rand() % NUM_PALAVRAS]); //
 }
 
@@ -20,7 +23,7 @@ void palavraDoJogo()
 void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada)
 {
 
-    // Loop através de cada linha da matriz, onde cada linha representa uma tentativa
+    // Percorre por cada linha da matriz, sendo cada linha uma tentativa
     for (int i = 0; i < TENTATIVAS; i++)
     {
         // Loop através de cada caractere na linha atual
