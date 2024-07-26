@@ -5,16 +5,18 @@
 #include <locale.h>
 #include "wordle.h" //importação do cabeçalho
 
-void palavraDoJogo();
-void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
 
 int main()
 {
+    void palavraDoJogo();
+    void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
+    //void palavraDoJogo();
+    //void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
     /*
         Define a localidade para o Português-Brasil
         permitindo a utilização de acentos como ^, ç, é.
     */
-    setlocale(LC_ALL, "portuguese-brazilian");
+    //setlocale(LC_ALL, "portuguese-brazilian");
 
     // Gera um número aleatório com base na hora do computador
     srand(time(NULL));
@@ -64,7 +66,7 @@ int main()
 
         if (!acertou)
         {
-            printf("Que pena, você não conseguiu acertar a palavra. A palavra correta era: %s\n", palavra_secreta);
+            printf("Que pena, voce nao conseguiu acertar a palavra. A palavra correta era: %s\n", palavra_secreta);
             erros++;
         }
         printf("Placar: %d Acertos, %d Erros\n", acertos, erros);
