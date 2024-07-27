@@ -8,7 +8,7 @@
     incrementa em +1 devida a limitação de como
     Strings funcionam em C, pois sempre são finalizadas em \0
 */
-extern char palavra_secreta[TAMANHO_PALAVRA + 1];
+char palavra_secreta[TAMANHO_PALAVRA + 1];
 
 void palavraDoJogo()
 {
