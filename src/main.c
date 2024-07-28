@@ -4,11 +4,12 @@
 #include <time.h>
 #include <locale.h>
 #include "wordle.h" //importação do cabeçalho
+#include "wordle.c"
 
 
 int main()
 {
-    void palavraDoJogo();
+    palavraDoJogo();
     void desenharMatriz(char matriz[TENTATIVAS][TAMANHO_PALAVRA + 1], int rodada);
 
     // Gera um número aleatório com base na hora do computador
